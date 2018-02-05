@@ -1,0 +1,153 @@
+
+h1 {
+    font-size: 50px;
+    font-family: 'Open Sans', sans-serif;
+    color: #535353;
+}
+
+body{
+  margin: 0px;
+  background-color:#FDF6E3;
+  font-family: 'Open Sans', sans-serif;
+}
+
+img{
+	margin-bottom: 20px;
+}
+
+.header{
+  padding-top: 1px;
+  padding-bottom: 1px;
+  background-color: #F9EDBE;
+  text-align: center;
+  box-shadow: 0 5px 6px -2px #F7DA8D;
+}
+
+.row{
+	display: block;
+}
+
+/*
+1. display div in columns
+2. center the buttons
+*/
+.column {
+    float: left;
+    width: 50%;
+    text-align: center;
+    border: 2px 2px 2px 2px;
+    margin-top: 100px;
+}
+.row:after {
+    content: "";
+    clear: both;
+}
+
+.button {
+	width: 80%;
+  background-color: #E0E1E2; /* Green */
+  border: none;
+  border-radius: 10px;
+  color: #5A5A5A;
+  padding: 15px 32px;
+  text-align: center;
+  font-size: 70px;
+  font-size: 2vw;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button:hover {
+  font-size: 75px;
+  font-size: 4vw;
+  color: black;
+}
+
+.column-popup {
+    float: left;
+    width: 50%;
+    text-align: center;
+    border: 2px 2px 2px 2px;
+}
+
+.row-popup {
+	display: block;
+	padding-bottom: 70px;
+}
+
+.button-continue {
+	background-color: lightgreen;
+	border: none;
+	border-radius: 10px;
+	color: #5A5A5A;
+	padding: 15px 32px;
+	text-align: center;
+	font-size: 70px;
+	font-size: 2vw;
+	cursor: pointer;
+}
+
+.button-cancel {
+	background-color: #ff695e; /* light red */
+	border: none;
+	border-radius: 10px;
+	color: #5A5A5A;
+	padding: 15px 32px;
+	text-align: center;
+	font-size: 70px;
+	font-size: 2vw;
+	cursor: pointer;
+}
+
+/********************
+Popup box css
+********************/
+.popupConfirm {
+	display: none;
+	position: fixed;
+	padding: 10px;
+	width: 280px;
+	left: 50%;
+	margin-left: -290px;
+	height: 180px;
+	top: 50%;
+	margin-top: -150px;
+	z-index: 20;
+}
+
+.popupConfirm:before {
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: -1;
+}
+
+.popupConfirm:after {
+	position: fixed;
+	content: "";
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: rgba(0,0,0,0.5);
+	z-index: -2;
+}
+
+.popupWrapper {
+	width: 550px;
+	margin: 50px auto;
+	text-align: center;
+}
+
+.popupContent {
+	border-radius: 25px;
+	background-color: #dddddd; /* some light gray */
+	padding: 15px;
+}
+
+#alertType {
+	text-decoration: underline;
+}

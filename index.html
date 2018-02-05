@@ -4,9 +4,28 @@
     <title>Alarm System</title>
     <link rel="stylesheet" href="css/index.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="/JavaScript/index.js"></script>
+    <script src="JavaScript/real.js"></script>
   </head>
   <body>
+  <div id="popupConfirm" class="popupConfirm" style="display: none;">
+    <div class="popupWrapper">
+      <div class="popupContent">
+        <h3 style="color: red;">!!There is a <span id="alertType">???</span> to Hawaii!!</h3>
+        <br><img src="image/danger_icon.png" style="width: 100px;">
+        <p>Click CONTINUE if you want to send a <u>REAL warning</u>, or CANCEL if it is just a <u>DRILL</u></p>
+        <div class="row-popup">
+          <div class="column-popup">
+            <a href="real.html">
+            <button class="button-continue" href="javascript:void(0)" onclick="popupVisibility('popupConfirm', null);">CONTINUE</button>
+            </a>
+          </div>
+          <div class="column-popup">
+            <button class="button-cancel" href="javascript:void(0)" onclick="popupVisibility('popupConfirm', null);">CANCEL</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
     <!row is the whole screen>
     <div class="row">
       <div class="header">
@@ -16,7 +35,7 @@
         <a href="test.html"><button class="button test">Test Alarm</button></a>
       </div>
       <div class="column">
-        <a href="real.html"><button class="button real">Real Alarm</button></a>
+        <a href="#"><button class="button real" onclick="popupVisibility('popupConfirm', 'Serious Threat');">Real Alarm</button></a>
         <br>
         <img src="image/danger_icon.png" style="width: 100px;"> 
       </div>

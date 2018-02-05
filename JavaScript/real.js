@@ -11,3 +11,6 @@ function popupVisibility(id, buttonText) {
 	}
 	
 }
+function typeToConfirm() {
+
+}

@@ -15,7 +15,7 @@
 				<p>Click CONTINUE to send the alert, or CANCEL to not send the alert</p>
 				<div class="row-popup">
 					<div class="column-popup">
-						<button class="button-continue" href="javascript:void(0)" onclick="popupVisibility('popupConfirm', null);">CONTINUE</button>
+						<button class="button-continue" href="javascript:void(0)" onclick="popupVisibility('popupConfirm', null);popupVisibility('typeToConfirm', null);">CONTINUE</button>
 					</div>
 					<div class="column-popup">
 						<button class="button-cancel" href="javascript:void(0)" onclick="popupVisibility('popupConfirm', null);">CANCEL</button>
@@ -23,8 +23,27 @@
 				</div>
 			</div>
 		</div>
+    <!Type to Confirm>
 	</div>
-  
+  <div id="typeToConfirm" class="popupConfirm" style="display: none;">
+    <div class="popupWrapper">
+      <div class="popupContent">
+        <h3 style="color: red;">!!Please type "Serious Threat" to Confirm!!</h3>
+        <br><img src="image/danger_icon.png" style="width: 100px;">
+        <p>Click CONTINUE to send the alert, or CANCEL to not send the alert</p>
+        <div class="row-popup">
+          <div class="column-popup">
+            <button class="button-continue" href="javascript:void(0)" onclick="popupVisibility('typeToConfirm', null);">CONTINUE</button>
+          </div>
+          <div class="column-popup">
+            <button class="button-cancel" href="javascript:void(0)" onclick="popupVisibility('typeToConfirm', null);">CANCEL</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
 	<div class="header">
         <h1>Real Alarms</h1>
 		<br><img src="image/danger_icon.png" style="width: 100px;">

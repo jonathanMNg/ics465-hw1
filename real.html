@@ -1,0 +1,63 @@
+<! Doctype html>
+<html>
+  <head>
+    <title>Alarm System</title>
+    <link rel="stylesheet" href="css/real.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="JavaScript/real.js"></script>
+  </head>
+  <body>
+	<div id="popupConfirm" class="popupConfirm" style="display: none;">
+		<div class="popupWrapper">
+			<div class="popupContent">
+				<h3 style="color: red;">!!You are about to send a real <span id="alertType">???</span> alert!!</h3>
+				<br><img src="image/danger_icon.png" style="width: 100px;">
+				<p>Click CONTINUE to send the alert, or CANCEL to not send the alert</p>
+				<div class="row-popup">
+					<div class="column-popup">
+						<button class="button-continue" href="javascript:void(0)" onclick="popupVisibility('popupConfirm', null);">CONTINUE</button>
+					</div>
+					<div class="column-popup">
+						<button class="button-cancel" href="javascript:void(0)" onclick="popupVisibility('popupConfirm', null);">CANCEL</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+  
+	<div class="header">
+        <h1>Real Alarms</h1>
+		<br><img src="image/danger_icon.png" style="width: 100px;">
+      </div>
+    <div class="row">
+      <div class="column">
+		<button class="button" onclick="popupVisibility('popupConfirm', 'BMD False Alarm');">BMD False Alarm</button>
+      </div>
+      <div class="column">
+		<button class="button" onclick="popupVisibility('popupConfirm', 'Amber Alert (CAE) - Kauai County Only');">Amber Alert (CAE) - Kauai County Only</button>
+      </div>
+    </div>
+	<div class="row">
+      <div class="column">
+		<button class="button" onclick="popupVisibility('popupConfirm', 'Amber Alert (CAE) - Statewide');">Amber Alert (CAE) - Statewide</button>
+      </div>
+      <div class="column">
+		<button class="button" onclick="popupVisibility('popupConfirm', 'PACOM (CDW) - Statewide');">PACOM (CDW) - Statewide</button>
+      </div>
+    </div>
+	<div class="row">
+      <div class="column">
+		<button class="button" onclick="popupVisibility('popupConfirm', 'Tsunami Warning (CEM) - Statewide');">Tsunami Warning (CEM) - Statewide</button>
+      </div>
+      <div class="column">
+		<button class="button" onclick="popupVisibility('popupConfirm', 'Landslide - Hana Road Closure');">Landslide - Hana Road Closure</button>
+      </div>
+    </div>
+	<div class="row">
+      <div class="column" style="padding-bottom: 150px;">
+		<button class="button" onclick="popupVisibility('popupConfirm', 'High Surf Warning North Shore');">High Surf Warning North Shore</button>
+      </div>
+    </div>
+	<script src="JavaScript/real.js"></script>
+  </body>
+</html>

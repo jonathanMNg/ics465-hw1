@@ -51,16 +51,14 @@ img{
   color: #5A5A5A;
   padding: 15px 32px;
   text-align: center;
-  font-size: 70px;
   font-size: 2vw;
   margin: 4px 2px;
   cursor: pointer;
 }
 
 .button:hover {
-  font-size: 75px;
-  font-size: 4vw;
-  color: black;
+  color: white;
+  background-color: red;
 }
 
 .column-popup {

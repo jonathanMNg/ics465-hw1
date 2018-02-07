@@ -4,9 +4,11 @@
   <title>Alarm System</title>
   <link rel="stylesheet" href="css/real.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore.js"></script>
   <script src="JavaScript/real.js"></script>
 </head>
 <body>
+<!Popup Confirm>
 <div id="popupConfirm" class="popupConfirm" style="display: none;">
   <div class="popupWrapper">
     <div class="popupContent">
@@ -52,8 +54,6 @@
     </div>
   </div>
 </div>
-</div>
-</div>
 
 <div class="header">
   <br>
@@ -63,45 +63,39 @@
 </div>
 <div class="row">
   <div class="column">
-    <button class="button" onclick="popupVisibility('popupConfirm', 'BMD False Alarm');">BMD False Alarm</button>
+    <button class="button">BMD False Alarm</button>
   </div>
   <div class="column">
-    <button class="button" onclick="popupVisibility('popupConfirm', 'Amber Alert (CAE) - Kauai County Only');">Amber
-      Alert (CAE) - Kauai County Only
+    <button class="button">Amber Alert (CAE) - Kauai County Only
     </button>
   </div>
 </div>
 
 <div class="row">
   <div class="column">
-    <button class="button" onclick="popupVisibility('popupConfirm', 'Amber Alert (CAE) - Statewide');">Amber Alert (CAE)
-      - Statewide
+    <button class="button">Amber Alert (CAE) - Statewide
     </button>
   </div>
   <div class="column">
-    <button class="button" onclick="popupVisibility('popupConfirm', 'PACOM (CDW) - Statewide');">PACOM (CDW) -
-      Statewide
+    <button class="button">PACOM (CDW) - Statewide
     </button>
   </div>
 </div>
 
 <div class="row">
   <div class="column">
-    <button class="button" onclick="popupVisibility('popupConfirm', 'Tsunami Warning (CEM) - Statewide');">Tsunami
-      Warning (CEM) - Statewide
+    <button class="button">Tsunami Warning (CEM) - Statewide
     </button>
   </div>
   <div class="column">
-    <button class="button" onclick="popupVisibility('popupConfirm', 'Landslide - Hana Road Closure');">Landslide - Hana
-      Road Closure
+    <button class="button">Landslide - Hana Road Closure
     </button>
   </div>
 </div>
 
 <div class="row">
   <div class="column" style="padding-bottom: 150px;">
-    <button class="button" onclick="popupVisibility('popupConfirm', 'High Surf Warning North Shore');">High Surf Warning
-      North Shore
+    <button class="button">High Surf Warning North Shore
     </button>
   </div>
 </div>

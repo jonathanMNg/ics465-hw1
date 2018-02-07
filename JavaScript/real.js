@@ -24,3 +24,10 @@ function typeToConfirm(id) {
   }
   e.value = "";
 }
+function init() {
+  let buttons =document.getElementsByClassName('button');
+  _.map(buttons, function(button) {
+    button.setAttribute('onclick', `popupVisibility('popupConfirm', '${button.innerText}')`);
+  });
+}
+window.onload = init;

@@ -6,99 +6,99 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore.js"></script>
   <script src="JavaScript/real.js"></script>
+  <script src="JavaScript/shared.js"></script>
 </head>
 <body>
-<!Popup Confirm>
-<div id="popupConfirm" class="popupConfirm" style="display: none;">
-  <div class="popupWrapper">
-    <div class="popupContent">
-      <h3 style="color: red;">!!You are about to send a real <span id="alertType">???</span> alert!!</h3>
-      <br><img src="image/danger_icon.png" style="width: 100px;">
-      <p>Click CONTINUE to send the alert, or CANCEL to not send the alert</p>
-      <div class="row-popup">
-        <div class="column-popup">
-          <button class="button-continue" href="javascript:void(0)"
-                  onclick="popupVisibility('popupConfirm', null);popupVisibility('typeToConfirm', null);">CONTINUE
-          </button>
+  <!Popup Confirm>
+  <div id="popupConfirm" class="popupConfirm" style="display: none;">
+    <div class="popupWrapper">
+      <div class="popupContent">
+        <h3 style="color: red;">!!You are about to send a real <span id="alertType">???</span> alert!!</h3>
+        <br><img src="image/danger_icon.png" style="width: 100px;">
+        <p>Click CONTINUE to send the alert, or CANCEL to not send the alert</p>
+        <div class="row-popup">
+          <div class="column-popup">
+            <button class="button-continue" href="javascript:void(0)"
+                    onclick="popupVisibility('popupConfirm', null);popupVisibility('typeToConfirm', null);">CONTINUE
+            </button>
+          </div>
+          <div class="column-popup">
+            <button class="button-cancel" href="javascript:void(0)" onclick="popupVisibility('popupConfirm', null);">
+              CANCEL
+            </button>
+          </div>
         </div>
-        <div class="column-popup">
-          <button class="button-cancel" href="javascript:void(0)" onclick="popupVisibility('popupConfirm', null);">
-            CANCEL
-          </button>
+      </div>
+    </div>
+    <!Type to Confirm>
+  </div>
+  <div id="typeToConfirm" class="popupConfirm" style="display: none;">
+    <div class="popupWrapper">
+      <div class="popupContent">
+        <h3 style="color: red;">!!Please type "Serious Threat" to Confirm!!</h3>
+        <br>
+        <div class="row-popup">
+          <input type="text" name="confirmation" class="confirm" id="confirm" autocomplete="off" value="">
+        </div>
+        <div class="row-popup">
+          <div class="column-popup">
+            <button class="button-continue" href="javascript:void(0)"
+                    onclick="typeToConfirm('confirm');">SEND
+            </button>
+          </div>
+          <div class="column-popup">
+            <button class="button-cancel" href="javascript:void(0)" onclick="popupVisibility('typeToConfirm', null);">
+              CANCEL
+            </button>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <!Type to Confirm>
-</div>
-<div id="typeToConfirm" class="popupConfirm" style="display: none;">
-  <div class="popupWrapper">
-    <div class="popupContent">
-      <h3 style="color: red;">!!Please type "Serious Threat" to Confirm!!</h3>
-      <br>
-      <div class="row-popup">
-        <input type="text" name="confirmation" class="confirm" id="confirm" autocomplete="off" value="">
-      </div>
-      <div class="row-popup">
-        <div class="column-popup">
-          <button class="button-continue" href="javascript:void(0)"
-                  onclick="typeToConfirm('confirm');">SEND
-          </button>
-        </div>
-        <div class="column-popup">
-          <button class="button-cancel" href="javascript:void(0)" onclick="popupVisibility('typeToConfirm', null);">
-            CANCEL
-          </button>
-        </div>
-      </div>
+
+  <div class="header">
+    <br>
+    <a href="index.html">Back to Main</a>
+    <h1>Real Alarms</h1>
+    <br><img src="image/danger_icon.png" style="width: 100px;">
+  </div>
+  <div class="row">
+    <div class="column">
+      <button class="button">BMD False Alarm</button>
+    </div>
+    <div class="column">
+      <button class="button">Amber Alert (CAE) - Kauai County Only
+      </button>
     </div>
   </div>
-</div>
 
-<div class="header">
-  <br>
-  <a href="index.html">Back to Main</a>
-  <h1>Real Alarms</h1>
-  <br><img src="image/danger_icon.png" style="width: 100px;">
-</div>
-<div class="row">
-  <div class="column">
-    <button class="button">BMD False Alarm</button>
+  <div class="row">
+    <div class="column">
+      <button class="button">Amber Alert (CAE) - Statewide
+      </button>
+    </div>
+    <div class="column">
+      <button class="button">PACOM (CDW) - Statewide
+      </button>
+    </div>
   </div>
-  <div class="column">
-    <button class="button">Amber Alert (CAE) - Kauai County Only
-    </button>
-  </div>
-</div>
 
-<div class="row">
-  <div class="column">
-    <button class="button">Amber Alert (CAE) - Statewide
-    </button>
+  <div class="row">
+    <div class="column">
+      <button class="button">Tsunami Warning (CEM) - Statewide
+      </button>
+    </div>
+    <div class="column">
+      <button class="button">Landslide - Hana Road Closure
+      </button>
+    </div>
   </div>
-  <div class="column">
-    <button class="button">PACOM (CDW) - Statewide
-    </button>
-  </div>
-</div>
 
-<div class="row">
-  <div class="column">
-    <button class="button">Tsunami Warning (CEM) - Statewide
-    </button>
+  <div class="row">
+    <div class="column" style="padding-bottom: 150px;">
+      <button class="button">High Surf Warning North Shore
+      </button>
+    </div>
   </div>
-  <div class="column">
-    <button class="button">Landslide - Hana Road Closure
-    </button>
-  </div>
-</div>
-
-<div class="row">
-  <div class="column" style="padding-bottom: 150px;">
-    <button class="button">High Surf Warning North Shore
-    </button>
-  </div>
-</div>
-<script src="JavaScript/real.js"></script>
 </body>
 </html>

@@ -1,12 +1,13 @@
 <! Doctype html>
 <html>
-  <head>
-    <title>Alarm System</title>
-    <link rel="stylesheet" href="css/index.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="JavaScript/real.js"></script>
-  </head>
-  <body>
+<head>
+  <title>Alarm System</title>
+  <link rel="stylesheet" href="css/index.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="JavaScript/index.js"></script>
+  <script src="JavaScript/shared.js"></script>
+</head>
+<body>
   <div id="popupConfirm" class="popupConfirm" style="display: none;">
     <div class="popupWrapper">
       <div class="popupContent">
@@ -16,31 +17,37 @@
         <div class="row-popup">
           <div class="column-popup">
             <a href="real.html">
-            <button class="button-continue" href="javascript:void(0)" onclick="popupVisibility('popupConfirm', null);">CONTINUE</button>
+              <button class="button-continue" href="javascript:void(0)" onclick="popupVisibility('popupConfirm', null);">
+                CONTINUE
+              </button>
             </a>
           </div>
           <div class="column-popup">
-            <button class="button-cancel" href="javascript:void(0)" onclick="popupVisibility('popupConfirm', null);">CANCEL</button>
+            <button class="button-cancel" href="javascript:void(0)" onclick="popupVisibility('popupConfirm', null);">
+              CANCEL
+            </button>
           </div>
         </div>
       </div>
     </div>
   </div>
-    <!row is the whole screen>
-    <div class="row">
-      <div class="header">
-        <h1>Alarm System</h1>
-      </div>
-      <div class="column">
-        <a href="test.html"><button class="button test">Test Alarm</button></a>
-      </div>
-      <div class="column">
-        <a href="#"><button class="button real" onclick="popupVisibility('popupConfirm', 'Serious Threat');">Real Alarm</button></a>
-        <br>
-        <img src="image/danger_icon.png" style="width: 100px;"> 
-      </div>
+  <!row is the whole screen>
+  <div class="row">
+    <div class="header">
+      <h1>Alarm System</h1>
     </div>
-
-    <script src="JavaScript/index.js"></script>
-  </body>
+    <div class="column">
+      <a href="test.html">
+        <button class="button test">Test Alarm</button>
+      </a>
+    </div>
+    <div class="column">
+      <a href="#">
+        <button class="button real" onclick="popupVisibility('popupConfirm', 'Serious Threat');">Real Alarm</button>
+      </a>
+      <br>
+      <img src="image/danger_icon.png" style="width: 100px;">
+    </div>
+  </div>
+</body>
 </html>
